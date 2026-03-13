@@ -15,7 +15,7 @@ export default function Footer() {
         <p className="text-text-muted text-xs sm:text-sm text-center md:text-left">© {year} Mohanth</p>
         <div className="flex items-center gap-6 sm:gap-8">
           <a
-            href="https://github.com/mohanth"
+            href="https://github.com/MohanthTulimilli"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-secondary hover:text-text-primary transition-colors text-sm"

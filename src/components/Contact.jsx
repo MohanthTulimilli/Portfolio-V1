@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const links = [
   { label: 'Email', href: 'mailto:mohanthtulimilli.11t@gmail.com', value: 'mohanthtulimilli.11t@gmail.com' },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/mohanth', value: 'LinkedIn' },
-  { label: 'GitHub', href: 'https://github.com/mohanth', value: 'GitHub' },
+  { label: 'GitHub', href: 'https://github.com/MohanthTulimilli', value: 'GitHub' },
 ];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mreyqzpy';
