@@ -1,0 +1,43 @@
+export const projects = [
+  {
+    id: 'student-management-system',
+    title: 'Student Management System',
+    tagline: 'Full-stack academic administration platform',
+    description: 'A comprehensive system for managing student records, courses, attendance, and grades. Built with Django and MySQL for scalability and ease of use for educational institutions.',
+    image: null,
+    gradient: 'from-emerald-900/40 to-teal-950/30',
+    overview: 'The Student Management System is a full-stack web application designed to streamline academic administration. It enables institutions to manage student enrollments, course schedules, attendance tracking, and grade reporting from a single dashboard.',
+    problem: 'Educational institutions often rely on scattered spreadsheets and legacy systems, leading to data inconsistency, limited reporting, and poor user experience for both staff and students.',
+    process: 'We followed an iterative design and development process: gathered requirements from academic staff, designed the database schema and API, built the Django backend with REST endpoints, and implemented a clean admin and student-facing UI with role-based access.',
+    solution: 'A Django-based platform with MySQL for reliable data storage, role-based authentication (admin, faculty, student), RESTful APIs for future integrations, and responsive UI for desktop and mobile use.',
+    results: 'Reduced administrative overhead, centralized student data, automated report generation, and a single source of truth for grades and attendance.',
+  },
+  {
+    id: 'video-streaming-platform',
+    title: 'Video Streaming Platform',
+    tagline: 'Netflix-style streaming experience',
+    description: 'A video streaming platform with user authentication, content catalog, and adaptive playback. Delivers a modern viewing experience with organized libraries and search.',
+    image: null,
+    gradient: 'from-violet-900/40 to-fuchsia-950/30',
+    overview: 'A video streaming web application that mimics the experience of modern OTT platforms. Users can browse content, create watchlists, and stream video with a clean, intuitive interface.',
+    problem: 'Small content creators and organizations need an affordable way to host and stream video content with proper cataloging and user management, without the complexity of building from scratch.',
+    process: 'We defined content and user models, implemented secure authentication, built a catalog UI with filters and search, integrated a video player with quality options, and optimized for performance and scalability.',
+    solution: 'Full-stack streaming platform with user accounts, content categorization, responsive video player, and a scalable backend ready for growth.',
+    results: 'Enabled organized video hosting, improved user engagement through better discoverability, and a foundation for future features like recommendations and analytics.',
+  },
+  {
+    id: 'farmer-friendly-web-app',
+    title: 'Farmer Friendly Web Application',
+    tagline: 'Connecting farmers to markets and resources',
+    description: 'A web application that helps farmers access market prices, weather information, and agricultural resources. Built to bridge the gap between rural farmers and digital tools.',
+    image: null,
+    gradient: 'from-amber-900/40 to-orange-950/30',
+    overview: 'The Farmer Friendly Web Application brings essential digital tools to farmers: real-time market prices, weather forecasts, crop advice, and a simple interface designed for low connectivity and varying literacy levels.',
+    problem: 'Farmers in many regions lack easy access to market prices, weather data, and agricultural best practices, which affects their income and crop decisions.',
+    process: 'We conducted user research with local farmers, designed a simple navigation and language-friendly UI, integrated weather and price APIs, and built a lightweight backend that works well on slower connections.',
+    solution: 'A responsive web app with clear typography, minimal data usage, local language support where applicable, and integrations for weather and commodity prices.',
+    results: 'Better-informed farming decisions, improved access to market information, and a scalable template for similar agricultural apps.',
+  },
+];
+
+export const getProjectById = (id) => projects.find((p) => p.id === id);
