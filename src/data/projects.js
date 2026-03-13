@@ -1,5 +1,18 @@
 export const projects = [
   {
+    id: 'healthcare-revenue-cycle-prediction',
+    title: 'AI-Based Healthcare Revenue Cycle Prediction System',
+    tagline: 'ML system for claim denials, payment delays & no-shows',
+    description: 'Machine learning system that predicts insurance claim denials, payment delays, and appointment no-shows using Random Forest models. Built with Python, Scikit-learn, React, Spring Boot, and MySQL.',
+    image: null,
+    gradient: 'from-sky-900/40 to-indigo-950/30',
+    overview: 'A machine learning system designed to predict insurance claim denials, payment delays, and appointment no-shows in healthcare revenue cycle management. Built to reduce operational overhead and improve financial forecasting for healthcare providers.',
+    problem: 'Healthcare organizations spend 5–10 minutes manually validating each claim. Denied claims and no-shows create revenue leakage and operational inefficiency. Traditional rule-based systems lack the accuracy needed for proactive intervention.',
+    process: 'Analyzed historical claim data to identify denial patterns. Built feature pipelines for claim metadata, patient history, and provider information. Experimented with Random Forest, XGBoost, and neural networks. Validated using ROC-AUC and F1 metrics. Integrated with existing Spring Boot backend.',
+    solution: 'Deployed a modular ML pipeline: Python-based training with Scikit-learn, REST APIs for real-time inference, React frontend for dashboards, MySQL for data persistence. Architecture supports batch retraining and A/B testing.',
+    results: 'Improved model accuracy for denial and no-show prediction, enabling proactive intervention and better financial forecasting for healthcare providers.',
+  },
+  {
     id: 'student-management-system',
     title: 'Student Management System',
     tagline: 'Full-stack academic administration platform',
