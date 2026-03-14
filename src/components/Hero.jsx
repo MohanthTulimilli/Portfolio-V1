@@ -65,8 +65,8 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* Layer 3: Hero text content and buttons */}
-      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 text-center">
+      {/* Layer 3: Hero text content and buttons – lifted slightly in both themes */}
+      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 text-center -translate-y-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -127,14 +127,14 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Down arrow: one step down – positioned higher on mobile so it stays visible */}
+      {/* Down arrow: one step down – lifted slightly with hero content in both themes */}
       <motion.button
         type="button"
         onClick={(e) => {
           scrollOneStep();
           e.currentTarget.blur();
         }}
-        className="hero-btn-arrow absolute bottom-16 sm:bottom-10 left-0 right-0 mx-auto z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
+        className="hero-btn-arrow absolute bottom-20 sm:bottom-12 left-0 right-0 mx-auto z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
         aria-label={t('hero.scrollDown')}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
