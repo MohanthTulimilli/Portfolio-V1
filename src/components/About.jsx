@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const skills = ['C', 'Java', 'Python', 'Django', 'Spring Boot', 'MySQL', 'AWS'];
+const skills = ['Java', 'Python', 'Django', 'Spring Boot', 'MySQL', 'AWS', 'Docker', 'Kubernetes'];
 
 export default function About() {
   return (
@@ -40,7 +40,7 @@ export default function About() {
           <div>
             <h3 className="text-sm font-medium text-text-muted uppercase tracking-widest mb-4">Experience</h3>
             <p className="text-text-secondary leading-relaxed">
-              Building full-stack applications with Django, Spring Boot, and modern front-end tools. Experience with AWS for deployment and infrastructure. Focus on clean code, APIs, and database design.
+              Building scalable full-stack applications using Django, Spring Boot, React, and the MERN stack, with experience developing projects like an AI-based hospital management system and student management platforms, and skilled in REST APIs, clean architecture, database design, Docker, Kubernetes, Ansible, and AWS for cloud deployment and DevOps automation.
             </p>
           </div>
           <div>
@@ -48,10 +48,21 @@ export default function About() {
             <p className="text-text-primary font-medium">B.Tech in Computer Science</p>
             <p className="text-text-secondary">Koneru Lakshmaiah University</p>
             <p className="text-text-muted text-sm mt-1">CGPA: 8.96 · 2023 – 2027</p>
+            <p className="text-text-primary font-medium mt-4">Intermediate (10+2)</p>
+            <p className="text-text-secondary">Sri Chaitanya</p>
+            <p className="text-text-muted text-sm mt-1">Maths, Physics, Chemistry · 83% · 2020 – 2023</p>
           </div>
           <div>
             <h3 className="text-sm font-medium text-text-muted uppercase tracking-widest mb-4">Certifications</h3>
-            <p className="text-text-secondary">AWS Cloud Practitioner (CLF-C02)</p>
+            <p className="text-text-primary font-medium">AWS Cloud Practitioner (CLF-C02)</p>
+            <a
+              href="https://cp.certmetrics.com/amazon/en/public/verify/credential/fba03497dc9a4b4ebc345ded0b7a78d8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted text-sm hover:text-text-primary underline underline-offset-2 transition-colors block mt-1"
+            >
+              Verify credential
+            </a>
           </div>
         </div>
       </motion.div>

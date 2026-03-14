@@ -26,17 +26,19 @@ export default function Navbar() {
   }, [location.pathname, location.hash]);
 
   function handleNavClick(e, hash) {
+    e.preventDefault();
+    setMobileOpen(false);
     if (location.pathname !== '/') {
       navigate(`/#${hash}`);
       return;
     }
-    e.preventDefault();
     window.history.pushState(null, '', `/#${hash}`);
     const el = document.getElementById(hash);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
-    setMobileOpen(false);
   }
 
   return (
@@ -51,8 +53,13 @@ export default function Navbar() {
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4 md:py-5 flex items-center justify-between">
         <Link
           to="/"
-          className="text-text-primary font-medium text-base sm:text-lg tracking-tight hover:opacity-80 transition-opacity"
+          className="flex items-center gap-2 text-text-primary font-medium text-base sm:text-lg tracking-tight hover:opacity-80 transition-opacity"
         >
+          <img
+            src="/Logo-new.jpg"
+            alt="Mohanth"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-none object-contain flex-shrink-0"
+          />
           Mohanth
         </Link>
 

@@ -23,3 +23,20 @@
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
 }
+
+/* Mobile/touch: same white feedback as hover when user taps hero buttons */
+@media (hover: none) {
+  .hero-btn-outline:active,
+  .hero-btn-arrow:active {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+  }
+  /* After click: return to original look (no stuck white state) */
+  .hero-btn-outline:focus,
+  .hero-btn-arrow:focus {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+}

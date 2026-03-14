@@ -181,6 +181,16 @@ export default function Contact() {
             )}
             {status === 'idle' && 'Send'}
           </motion.button>
+          {status === 'success' && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-4 text-sm text-text-secondary"
+            >
+              Thanks, I'll get back to you soon.
+            </motion.p>
+          )}
         </motion.form>
       </motion.div>
     </section>

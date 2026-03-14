@@ -2,7 +2,19 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function scrollOneStep() {
-  window.scrollTo({ top: window.scrollY + window.innerHeight, behavior: 'smooth' });
+  const start = window.scrollY;
+  const end = start + window.innerHeight;
+  const duration = 650; // faster, snappier scroll
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const t = Math.min((currentTime - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 2); // easeOutQuad – quick then gentle stop
+    window.scrollTo(0, start + (end - start) * eased);
+    if (t < 1) requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
 }
 
 export default function Hero() {
@@ -69,20 +81,20 @@ export default function Hero() {
         >
           <Link
             to="/#work"
-            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-white text-background font-medium rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] transition-all duration-300 text-sm sm:text-base"
+            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-white text-background font-medium rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-background transition-all duration-300 text-sm sm:text-base"
           >
             View Work
           </Link>
           <a
             href="/resume.pdf"
             download="Mohanth_Resume.pdf"
-            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-[rgba(255,255,255,0.3)] text-white font-medium rounded-full hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 text-sm sm:text-base"
+            className="hero-btn-outline inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-[rgba(255,255,255,0.3)] text-white font-medium rounded-full transition-all duration-300 text-sm sm:text-base hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white focus:outline-none focus:bg-transparent focus:text-white focus:border-[rgba(255,255,255,0.3)]"
           >
             Download Resume
           </a>
           <Link
             to="/#contact"
-            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-[rgba(255,255,255,0.3)] text-white font-medium rounded-full hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 text-sm sm:text-base"
+            className="hero-btn-outline inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-[rgba(255,255,255,0.3)] text-white font-medium rounded-full transition-all duration-300 text-sm sm:text-base hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white focus:outline-none focus:bg-transparent focus:text-white focus:border-[rgba(255,255,255,0.3)]"
           >
             Contact
           </Link>
@@ -92,16 +104,25 @@ export default function Hero() {
       {/* Down arrow: one step down */}
       <motion.button
         type="button"
-        onClick={scrollOneStep}
-        className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 hover:text-white hover:border-white/60 hover:bg-white/5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+        onClick={(e) => {
+          scrollOneStep();
+          e.currentTarget.blur();
+        }}
+        className="hero-btn-arrow absolute bottom-6 sm:bottom-8 left-0 right-0 mx-auto z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
         aria-label="Scroll down one step"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 5v14M19 12l-7 7-7-7" />
-        </svg>
+        <motion.span
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          className="inline-flex"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
+        </motion.span>
       </motion.button>
     </section>
   );
