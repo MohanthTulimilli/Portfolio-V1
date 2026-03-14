@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "hello": "Hello",
+    "imMohanth": "I'm Mohanth",
+    "role": "AI-ML Engineer",
+    "tagline": "I build scalable applications, AI-powered systems, and cloud solutions with a focus on clean architecture and user experience.",
+    "viewWork": "View Work",
+    "downloadResume": "Download Resume",
+    "contact": "Contact",
+    "scrollDown": "Scroll down one step"
+  },
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "work": {
+    "selectedWork": "Selected Work",
+    "projects": "Projects"
+  },
+  "about": {
+    "about": "About",
+    "openTo": "Open to",
+    "openToText": "I'm looking for <1>internships</1>, <3>contract</3>, and <5>full-time</5> opportunities. If you're building something in AI/ML, full-stack, or cloud—let's talk.",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "certifications": "Certifications",
+    "verifyCredential": "Verify credential",
+    "btech": "B.Tech in Computer Science",
+    "klu": "Koneru Lakshmaiah University",
+    "cgpa": "CGPA: 8.96 · 2023 – 2027",
+    "intermediate": "Intermediate (10+2)",
+    "sriChaitanya": "Sri Chaitanya",
+    "mathsPhysicsChemistry": "Maths, Physics, Chemistry · 83% · 2020 – 2023",
+    "awsCert": "AWS Cloud Practitioner (CLF-C02)",
+    "bio": "I'm an AI Engineer with a passion for building scalable systems and clean user experiences. I focus on AI/ML solutions, backend development, and turning complex requirements into simple, maintainable solutions.",
+    "experienceText": "Building scalable full-stack applications using Django, Spring Boot, React, and the MERN stack, with experience developing projects like an AI-based hospital management system and student management platforms, and skilled in REST APIs, clean architecture, database design, Docker, Kubernetes, Ansible, and AWS for cloud deployment and DevOps automation."
+  },
+  "contact": {
+    "getInTouch": "Get in touch",
+    "letsWorkTogether": "Let's work together",
+    "subtitle": "Have a project in mind or want to chat? I'd love to hear from you.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "thanksMessage": "Thanks, I'll get back to you soon.",
+    "placeholderName": "Your name",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "Your message...",
+    "emailLabel": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "formError": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "home": "Home",
+    "copyright": "© {{year}} Mohanth"
+  },
+  "cookie": {
+    "message": "This site may use cookies to improve your experience and for analytics. You can accept or reject non-essential cookies.",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
+  "notfound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backToHome": "Back to home"
+  },
+  "caseStudy": {
+    "backToWork": "Back to Work",
+    "viewAllProjects": "View all projects",
+    "viewProject": "View Project",
+    "projectNotFound": "Project not found",
+    "overview": "Overview",
+    "problem": "Problem",
+    "process": "Process",
+    "solution": "Solution",
+    "results": "Results"
+  },
+  "projects": {
+    "healthcare-revenue-cycle-prediction": {
+      "title": "AI-Based Healthcare Revenue Cycle Prediction System",
+      "tagline": "ML system for claim denials, payment delays & no-shows",
+      "description": "Machine learning system that predicts insurance claim denials, payment delays, and appointment no-shows using Random Forest models. Built with Python, Scikit-learn, React, Spring Boot, and MySQL.",
+      "overview": "A machine learning system designed to predict insurance claim denials, payment delays, and appointment no-shows in healthcare revenue cycle management. Built to reduce operational overhead and improve financial forecasting for healthcare providers.",
+      "problem": "Healthcare organizations spend 5–10 minutes manually validating each claim. Denied claims and no-shows create revenue leakage and operational inefficiency. Traditional rule-based systems lack the accuracy needed for proactive intervention.",
+      "process": "Analyzed historical claim data to identify denial patterns. Built feature pipelines for claim metadata, patient history, and provider information. Experimented with Random Forest, XGBoost, and neural networks. Validated using ROC-AUC and F1 metrics. Integrated with existing Spring Boot backend.",
+      "solution": "Deployed a modular ML pipeline: Python-based training with Scikit-learn, REST APIs for real-time inference, React frontend for dashboards, MySQL for data persistence. Architecture supports batch retraining and A/B testing.",
+      "results": "Improved model accuracy for denial and no-show prediction, enabling proactive intervention and better financial forecasting for healthcare providers."
+    },
+    "student-management-system": {
+      "title": "Student Management System",
+      "tagline": "Full-stack academic administration platform",
+      "description": "A comprehensive system for managing student records, courses, attendance, and grades. Built with Django and MySQL for scalability and ease of use for educational institutions.",
+      "overview": "The Student Management System is a full-stack web application designed to streamline academic administration. It enables institutions to manage student enrollments, course schedules, attendance tracking, and grade reporting from a single dashboard.",
+      "problem": "Educational institutions often rely on scattered spreadsheets and legacy systems, leading to data inconsistency, limited reporting, and poor user experience for both staff and students.",
+      "process": "We followed an iterative design and development process: gathered requirements from academic staff, designed the database schema and API, built the Django backend with REST endpoints, and implemented a clean admin and student-facing UI with role-based access.",
+      "solution": "A Django-based platform with MySQL for reliable data storage, role-based authentication (admin, faculty, student), RESTful APIs for future integrations, and responsive UI for desktop and mobile use.",
+      "results": "Reduced administrative overhead, centralized student data, automated report generation, and a single source of truth for grades and attendance."
+    },
+    "video-streaming-platform": {
+      "title": "Video Streaming Platform",
+      "tagline": "Netflix-style streaming experience",
+      "description": "A video streaming platform with user authentication, content catalog, and adaptive playback. Delivers a modern viewing experience with organized libraries and search.",
+      "overview": "A video streaming web application that mimics the experience of modern OTT platforms. Users can browse content, create watchlists, and stream video with a clean, intuitive interface.",
+      "problem": "Small content creators and organizations need an affordable way to host and stream video content with proper cataloging and user management, without the complexity of building from scratch.",
+      "process": "We defined content and user models, implemented secure authentication, built a catalog UI with filters and search, integrated a video player with quality options, and optimized for performance and scalability.",
+      "solution": "Full-stack streaming platform with user accounts, content categorization, responsive video player, and a scalable backend ready for growth.",
+      "results": "Enabled organized video hosting, improved user engagement through better discoverability, and a foundation for future features like recommendations and analytics."
+    },
+    "farmer-friendly-web-app": {
+      "title": "Farmer Friendly Web Application",
+      "tagline": "Connecting farmers to markets and resources",
+      "description": "A web application that helps farmers access market prices, weather information, and agricultural resources. Built to bridge the gap between rural farmers and digital tools.",
+      "overview": "The Farmer Friendly Web Application brings essential digital tools to farmers: real-time market prices, weather forecasts, crop advice, and a simple interface designed for low connectivity and varying literacy levels.",
+      "problem": "Farmers in many regions lack easy access to market prices, weather data, and agricultural best practices, which affects their income and crop decisions.",
+      "process": "We conducted user research with local farmers, designed a simple navigation and language-friendly UI, integrated weather and price APIs, and built a lightweight backend that works well on slower connections.",
+      "solution": "A responsive web app with clear typography, minimal data usage, local language support where applicable, and integrations for weather and commodity prices.",
+      "results": "Better-informed farming decisions, improved access to market information, and a scalable template for similar agricultural apps."
+    }
+  }
+}

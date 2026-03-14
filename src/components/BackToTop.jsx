@@ -5,7 +5,15 @@ export default function BackToTop() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setVisible(window.scrollY > 400);
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollBottom = scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const distanceFromBottom = docHeight - scrollBottom;
+      const hasScrolledEnough = scrollY > window.innerHeight;
+      const isNearBottom = distanceFromBottom <= 120;
+      setVisible(hasScrolledEnough && isNearBottom);
+    };
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,7 +32,7 @@ export default function BackToTop() {
             scrollToTop();
             e.currentTarget.blur();
           }}
-          className="hero-btn-arrow fixed bottom-6 sm:bottom-8 right-6 z-40 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
+          className="hero-btn-arrow fixed bottom-24 sm:bottom-28 right-4 sm:right-6 z-40 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
           aria-label="Back to top"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

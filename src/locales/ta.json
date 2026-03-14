@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "hello": "வணக்கம்",
+    "imMohanth": "நான் மோகந்த்",
+    "role": "AI-ML இன்ஜினியர்",
+    "tagline": "நான் அளவிடக்கூடிய பயன்பாடுகள், AI-உந்துதல் அமைப்புகள் மற்றும் கிளவுட் தீர்வுகளை சுத்தமான கட்டமைப்பு மற்றும் பயனர் அனுபவத்தில் கவனம் செலுத்தி உருவாக்குகிறேன்.",
+    "viewWork": "பணியைக் காணுங்கள்",
+    "downloadResume": "ரெசுமே பதிவிறக்கு",
+    "contact": "தொடர்பு",
+    "scrollDown": "கீழே ஸ்க்ரோல் செய்யுங்கள்"
+  },
+  "nav": {
+    "work": "பணி",
+    "about": "என்னைப் பற்றி",
+    "projects": "திட்டங்கள்",
+    "contact": "தொடர்பு"
+  },
+  "work": {
+    "selectedWork": "தேர்ந்தெடுக்கப்பட்ட பணி",
+    "projects": "திட்டங்கள்"
+  },
+  "about": {
+    "about": "என்னைப் பற்றி",
+    "openTo": "திறந்துள்ளது",
+    "openToText": "நான் <1>பயிற்சி</1>, <3>காண்ட்ராக்ட்</3> மற்றும் <5>முழுநேர</5> வாய்ப்புகளைத் தேடுகிறேன். AI/ML, ஃபுல்-ஸ்டாக் அல்லது கிளவுடில் ஏதாவது உருவாக்கினால்—பேசுங்கள்.",
+    "skills": "திறன்கள்",
+    "experience": "அனுபவம்",
+    "education": "கல்வி",
+    "certifications": "சான்றிதழ்கள்",
+    "verifyCredential": "சான்றிதழை சரிபார்க்கவும்",
+    "btech": "B.Tech in Computer Science",
+    "klu": "கோனேரு லட்சுமையா பல்கலைக்கழகம்",
+    "cgpa": "CGPA: 8.96 · 2023 – 2027",
+    "intermediate": "இடைநிலை (10+2)",
+    "sriChaitanya": "ஸ்ரீ சைதன்யா",
+    "mathsPhysicsChemistry": "கணிதம், இயற்பியல், வேதியியல் · 83% · 2020 – 2023",
+    "awsCert": "AWS Cloud Practitioner (CLF-C02)",
+    "bio": "அளவிடக்கூடிய அமைப்புகள் மற்றும் சுத்தமான பயனர் அனுபவங்களை உருவாக்குவதில் ஆர்வமுள்ள AI இன்ஜினியர். AI/ML தீர்வுகள், பேகெண்ட் அபிவிருத்தி மற்றும் சிக்கலான தேவைகளை எளிய, பராமரிக்கக்கூடிய தீர்வுகளாக மாற்றுவதில் கவனம் செலுத்துகிறேன்.",
+    "experienceText": "டான்ஜோ, ஸ்பிரிங் பூட், ரியாக்ட் மற்றும் MERN ஸ்டேக் பயன்படுத்தி அளவிடக்கூடிய ஃபுல்-ஸ்டாக் பயன்பாடுகளை உருவாக்குதல். AI-சார்ந்த மருத்துவமனை மேலாண்மை அமைப்பு மற்றும் மாணவர் மேலாண்மை தளங்கள் போன்ற திட்டங்களை உருவாக்கிய அனுபவம். REST APIகள், கிளீன் ஆர்கிடெக்சர், டேட்டாபேஸ் வடிவமைப்பு, டாக்கர், குபெர்னெட்ஸ், அன்சிபிள் மற்றும் கிளவுட் டிப்ளாய்மென்ட் மற்றும் டெவ்ஒப்ஸ் ஆட்டோமேஷனுக்கான AWS இல் திறமை."
+  },
+  "contact": {
+    "getInTouch": "தொடர்பு கொள்ளுங்கள்",
+    "letsWorkTogether": "ஒன்றாக பணி செய்வோம்",
+    "subtitle": "திட்டம் உள்ளதா அல்லது பேச விரும்புகிறீர்களா? உங்களிடமிருந்து கேட்க விரும்புகிறேன்.",
+    "name": "பெயர்",
+    "email": "மின்னஞ்சல்",
+    "message": "செய்தி",
+    "send": "அனுப்பு",
+    "sending": "அனுப்புகிறது...",
+    "thanksMessage": "நன்றி, விரைவில் திரும்பத் தொடர்பு கொள்கிறேன்.",
+    "placeholderName": "உங்கள் பெயர்",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "உங்கள் செய்தி...",
+    "emailLabel": "மின்னஞ்சல்",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "formError": "ஏதோ தவறு நடந்தது. மீண்டும் முயற்சிக்கவும்."
+  },
+  "footer": {
+    "home": "முகப்பு",
+    "copyright": "© {{year}} மோகந்த்"
+  },
+  "cookie": {
+    "message": "இந்த தளம் உங்கள் அனுபவத்தை மேம்படுத்தவும் அனலிட்டிக்ஸிற்காக குக்கீகளைப் பயன்படுத்தலாம். அத்தியாவசியமற்ற குக்கீகளை ஏற்கலாம் அல்லது நிராகரிக்கலாம்.",
+    "accept": "ஏற்றுக்கொள்",
+    "reject": "நிராகரி"
+  },
+  "notfound": {
+    "title": "பக்கம் காணப்படவில்லை",
+    "description": "நீங்கள் தேடும் பக்கம் இல்லை அல்லது நகர்த்தப்பட்டது.",
+    "backToHome": "முகப்புக்குத் திரும்பு"
+  },
+  "caseStudy": {
+    "backToWork": "பணிக்குத் திரும்பு",
+    "viewAllProjects": "அனைத்து திட்டங்களையும் காணுங்கள்",
+    "viewProject": "திட்டத்தைக் காணுங்கள்",
+    "projectNotFound": "திட்டம் காணப்படவில்லை",
+    "overview": "கண்ணோட்டம்",
+    "problem": "பிரச்சனை",
+    "process": "செயல்முறை",
+    "solution": "தீர்வு",
+    "results": "முடிவுகள்"
+  },
+  "projects": {
+    "healthcare-revenue-cycle-prediction": {
+      "title": "AI-சார்ந்த சுகாதார வருவாய் சுழற்சி கணிப்பு அமைப்பு",
+      "tagline": "கோரிக்கை மறுப்புகள், பணம் செலுத்தும் தாமதம் மற்றும் வராதவர்களுக்கான ML அமைப்பு",
+      "description": "ரேண்டம் ஃபாரெஸ்ட் மாடல்கள் பயன்படுத்தி காப்பீட்டு கோரிக்கை மறுப்புகள், பணம் செலுத்தும் தாமதம் மற்றும் நேரம் வராதவர்களை கணிக்கும் மெஷின் லேர்னிங் அமைப்பு.",
+      "overview": "A machine learning system designed to predict insurance claim denials, payment delays, and appointment no-shows in healthcare revenue cycle management.",
+      "problem": "Healthcare organizations spend 5–10 minutes manually validating each claim. Denied claims and no-shows create revenue leakage and operational inefficiency.",
+      "process": "Analyzed historical claim data to identify denial patterns. Built feature pipelines for claim metadata, patient history, and provider information.",
+      "solution": "Deployed a modular ML pipeline: Python-based training with Scikit-learn, REST APIs for real-time inference, React frontend for dashboards, MySQL for data persistence.",
+      "results": "Improved model accuracy for denial and no-show prediction, enabling proactive intervention and better financial forecasting."
+    },
+    "student-management-system": {
+      "title": "மாணவர் மேலாண்மை அமைப்பு",
+      "tagline": "ஃபுல்-ஸ்டாக் கல்வி நிர்வாக தளம்",
+      "description": "மாணவர் பதிவுகள், பாடங்கள், வருகை மற்றும் தரங்களை நிர்வகிக்கும் முழுமையான அமைப்பு. டான்ஜோ மற்றும் MySQL உடன் கட்டப்பட்டது.",
+      "overview": "The Student Management System is a full-stack web application designed to streamline academic administration.",
+      "problem": "Educational institutions often rely on scattered spreadsheets and legacy systems, leading to data inconsistency and limited reporting.",
+      "process": "We followed an iterative design and development process: gathered requirements, designed the database schema and API, built the Django backend with REST endpoints.",
+      "solution": "A Django-based platform with MySQL for reliable data storage, role-based authentication, RESTful APIs, and responsive UI.",
+      "results": "Reduced administrative overhead, centralized student data, automated report generation."
+    },
+    "video-streaming-platform": {
+      "title": "வீடியோ ஸ்ட்ரீமிங் தளம்",
+      "tagline": "நெட்ஃப்ளிக்ஸ்-பாணி ஸ்ட்ரீமிங் அனுபவம்",
+      "description": "பயனர் அங்கீகாரம், உள்ளடக்கம் பட்டியல் மற்றும் தழுவல் பின்னணியுடன் வீடியோ ஸ்ட்ரீமிங் தளம்.",
+      "overview": "A video streaming web application that mimics the experience of modern OTT platforms.",
+      "problem": "Small content creators need an affordable way to host and stream video content with proper cataloging and user management.",
+      "process": "We defined content and user models, implemented secure authentication, built a catalog UI with filters and search.",
+      "solution": "Full-stack streaming platform with user accounts, content categorization, responsive video player.",
+      "results": "Enabled organized video hosting, improved user engagement through better discoverability."
+    },
+    "farmer-friendly-web-app": {
+      "title": "விவசாயி-நட்பு வலை பயன்பாடு",
+      "tagline": "விவசாயிகளை சந்தைகள் மற்றும் வளங்களுடன் இணைத்தல்",
+      "description": "விவசாயிகளுக்கு சந்தை விலைகள், வானிலை தகவல் மற்றும் விவசாய வளங்களை அணுக உதவும் வலை பயன்பாடு.",
+      "overview": "The Farmer Friendly Web Application brings essential digital tools to farmers: real-time market prices, weather forecasts, crop advice.",
+      "problem": "Farmers in many regions lack easy access to market prices, weather data, and agricultural best practices.",
+      "process": "We conducted user research with local farmers, designed a simple navigation and language-friendly UI, integrated weather and price APIs.",
+      "solution": "A responsive web app with clear typography, minimal data usage, local language support, and integrations for weather and commodity prices.",
+      "results": "Better-informed farming decisions, improved access to market information."
+    }
+  }
+}

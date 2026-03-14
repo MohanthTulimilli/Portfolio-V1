@@ -1,4 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { getProjectById } from '../data/projects';
 import Navbar from '../components/Navbar';
@@ -14,6 +15,7 @@ const sectionVariants = {
 };
 
 export default function CaseStudy() {
+  const { t } = useTranslation();
   const { projectId } = useParams();
   const project = getProjectById(projectId);
 
@@ -21,21 +23,22 @@ export default function CaseStudy() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 sm:px-6">
         <div className="text-center">
-          <h1 className="text-xl sm:text-2xl font-semibold text-text-primary mb-4">Project not found</h1>
+          <h1 className="text-xl sm:text-2xl font-semibold text-text-primary mb-4">{t('caseStudy.projectNotFound')}</h1>
           <Link to="/" className="text-text-secondary hover:text-text-primary underline">
-            Back to home
+            {t('notfound.backToHome')}
           </Link>
         </div>
       </div>
     );
   }
 
+  const { id } = project;
   const sections = [
-    { key: 'overview', title: 'Overview', content: project.overview },
-    { key: 'problem', title: 'Problem', content: project.problem },
-    { key: 'process', title: 'Process', content: project.process },
-    { key: 'solution', title: 'Solution', content: project.solution },
-    { key: 'results', title: 'Results', content: project.results },
+    { key: 'overview', contentKey: `projects.${id}.overview` },
+    { key: 'problem', contentKey: `projects.${id}.problem` },
+    { key: 'process', contentKey: `projects.${id}.process` },
+    { key: 'solution', contentKey: `projects.${id}.solution` },
+    { key: 'results', contentKey: `projects.${id}.results` },
   ];
 
   return (
@@ -49,26 +52,26 @@ export default function CaseStudy() {
           className="mb-10 sm:mb-16"
         >
           <Link
-            to="/#work"
+            to="/work"
             className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary text-sm mb-6 sm:mb-8 transition-colors"
           >
-            ← Back to Work
+            ← {t('caseStudy.backToWork')}
           </Link>
-          <p className="text-text-muted text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">{project.tagline}</p>
+          <p className="text-text-muted text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">{t(`projects.${id}.tagline`, { defaultValue: project.tagline })}</p>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-text-primary mb-4 sm:mb-6">
-            {project.title}
+            {t(`projects.${id}.title`, { defaultValue: project.title })}
           </h1>
-          <p className="text-text-secondary text-base sm:text-lg leading-relaxed">{project.description}</p>
+          <p className="text-text-secondary text-base sm:text-lg leading-relaxed">{t(`projects.${id}.description`, { defaultValue: project.description })}</p>
         </motion.div>
 
         <div className={`aspect-video rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.gradient} mb-16 sm:mb-24 flex items-center justify-center`}>
           <span className="text-text-muted text-3xl sm:text-4xl md:text-5xl font-light tracking-tight opacity-60">
-            {project.title.split(' ')[0]}
+            {t(`projects.${id}.title`, { defaultValue: project.title }).split(' ')[0]}
           </span>
         </div>
 
         <div className="space-y-12 sm:space-y-20">
-          {sections.map(({ key, title, content }, i) => (
+          {sections.map(({ key, contentKey }, i) => (
             <motion.section
               key={key}
               custom={i}
@@ -78,9 +81,9 @@ export default function CaseStudy() {
               className="border-b border-[rgba(255,255,255,0.08)] pb-10 sm:pb-16"
             >
               <h2 className="text-xs sm:text-sm font-medium text-text-muted uppercase tracking-widest mb-3 sm:mb-4">
-                {title}
+                {t(`caseStudy.${key}`)}
               </h2>
-              <p className="text-text-secondary text-base sm:text-lg leading-relaxed">{content}</p>
+              <p className="text-text-secondary text-base sm:text-lg leading-relaxed">{t(contentKey, { defaultValue: project[key] })}</p>
             </motion.section>
           ))}
         </div>
@@ -92,10 +95,10 @@ export default function CaseStudy() {
           className="mt-16 sm:mt-24 pt-10 sm:pt-16 border-t border-[rgba(255,255,255,0.08)]"
         >
           <Link
-            to="/#work"
+            to="/work"
             className="inline-flex items-center gap-2 text-text-primary font-medium hover:opacity-80 transition-opacity"
           >
-            View all projects
+            {t('caseStudy.viewAllProjects')}
             <span className="text-lg">→</span>
           </Link>
         </motion.div>

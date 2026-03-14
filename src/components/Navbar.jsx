@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navLinks = [
-  { hash: 'work', label: 'Work' },
-  { hash: 'about', label: 'About' },
-  { hash: 'projects', label: 'Projects' },
-  { hash: 'contact', label: 'Contact' },
+  { path: '/work', labelKey: 'nav.work' },
+  { path: '/about', labelKey: 'nav.about' },
+  { path: '/projects', labelKey: 'nav.projects' },
+  { path: '/contact', labelKey: 'nav.contact' },
 ];
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -23,23 +25,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMobileOpen(false);
-  }, [location.pathname, location.hash]);
-
-  function handleNavClick(e, hash) {
-    e.preventDefault();
-    setMobileOpen(false);
-    if (location.pathname !== '/') {
-      navigate(`/#${hash}`);
-      return;
-    }
-    window.history.pushState(null, '', `/#${hash}`);
-    const el = document.getElementById(hash);
-    if (el) {
-      requestAnimationFrame(() => {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    }
-  }
+  }, [location.pathname]);
 
   return (
     <motion.header
@@ -64,25 +50,27 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8 lg:gap-10">
-          {navLinks.map(({ hash, label }) => {
-            const isActive = location.pathname === '/' && location.hash === `#${hash}`;
-            return (
-              <li key={hash}>
-                <a
-                  href={`/#${hash}`}
-                  onClick={(e) => handleNavClick(e, hash)}
-                  className={`group relative text-sm font-medium text-text-secondary hover:text-text-primary transition-colors ${
-                    isActive ? 'text-text-primary' : ''
-                  }`}
-                >
-                  {label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <ul className="flex items-center gap-8 lg:gap-10">
+            {navLinks.map(({ path, labelKey }) => {
+              const isActive = location.pathname === path;
+              return (
+                <li key={path}>
+                  <Link
+                    to={path}
+                    className={`group relative text-sm font-medium text-text-secondary hover:text-text-primary transition-colors ${
+                      isActive ? 'text-text-primary' : ''
+                    }`}
+                  >
+                    {t(labelKey)}
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-300 group-hover:w-full" />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <LanguageSwitcher />
+        </div>
 
         {/* Mobile menu button */}
         <button
@@ -109,22 +97,24 @@ export default function Navbar() {
             className="md:hidden overflow-hidden border-t border-[rgba(255,255,255,0.08)] bg-background/95 backdrop-blur-md"
           >
             <ul className="px-4 py-6 flex flex-col gap-1">
-              {navLinks.map(({ hash, label }) => {
-                const isActive = location.pathname === '/' && location.hash === `#${hash}`;
+              {navLinks.map(({ path, labelKey }) => {
+                const isActive = location.pathname === path;
                 return (
-                  <li key={hash}>
-                    <a
-                      href={`/#${hash}`}
-                      onClick={(e) => handleNavClick(e, hash)}
-                      className={`block py-3 px-4 rounded-lg text-base font-medium transition-colors ${
+                  <li key={path}>
+                    <Link
+                      to={path}
+                      className={`flex items-center py-3 px-4 rounded-lg text-base font-medium transition-colors min-h-[48px] touch-manipulation w-full ${
                         isActive ? 'text-text-primary bg-white/10' : 'text-text-secondary hover:text-text-primary hover:bg-white/5'
                       }`}
                     >
-                      {label}
-                    </a>
+                      {t(labelKey)}
+                    </Link>
                   </li>
                 );
               })}
+              <li className="pt-3 mt-2 border-t border-[rgba(255,255,255,0.08)]">
+                <LanguageSwitcher inline />
+              </li>
             </ul>
           </motion.div>
         )}

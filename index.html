@@ -21,10 +21,10 @@
   </head>
   <body>
     <script>
-      if (location.hash) {
-        history.replaceState(null, '', location.pathname);
-        if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-        window.scrollTo(0, 0);
+      // Redirect old hash URLs to path-based URLs (#about -> /about)
+      var hash = location.hash.slice(1);
+      if (hash && ['work','about','projects','contact'].indexOf(hash) !== -1) {
+        history.replaceState(null, '', '/' + hash);
       }
     </script>
     <div id="root"></div>

@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "hello": "नमस्ते",
+    "imMohanth": "मैं मोहंथ हूं",
+    "role": "AI-ML इंजीनियर",
+    "tagline": "मैं स्केलेबल ऐप्लिकेशन, AI-पावर्ड सिस्टम और क्लाउड सॉल्यूशन बनाता हूं, क्लीन आर्किटेक्चर और यूजर एक्सपीरियंस पर फोकस के साथ।",
+    "viewWork": "काम देखें",
+    "downloadResume": "रिज्यूम डाउनलोड करें",
+    "contact": "संपर्क करें",
+    "scrollDown": "नीचे स्क्रॉल करें"
+  },
+  "nav": {
+    "work": "काम",
+    "about": "मेरे बारे में",
+    "projects": "प्रोजेक्ट्स",
+    "contact": "संपर्क"
+  },
+  "work": {
+    "selectedWork": "चुना हुआ काम",
+    "projects": "प्रोजेक्ट्स"
+  },
+  "about": {
+    "about": "मेरे बारे में",
+    "openTo": "खुला है",
+    "openToText": "मैं <1>इंटर्नशिप</1>, <3>कॉन्ट्रैक्ट</3> और <5>फुल-टाइम</5> अवसरों की तलाश में हूं। अगर आप AI/ML, फुल-स्टैक या क्लाउड में कुछ बना रहे हैं—बात करें।",
+    "skills": "स्किल्स",
+    "experience": "अनुभव",
+    "education": "शिक्षा",
+    "certifications": "सर्टिफिकेशन",
+    "verifyCredential": "क्रेडेंशियल वेरिफाई करें",
+    "btech": "B.Tech in Computer Science",
+    "klu": "कोनेरू लक्ष्मैया यूनिवर्सिटी",
+    "cgpa": "CGPA: 8.96 · 2023 – 2027",
+    "intermediate": "इंटरमीडिएट (10+2)",
+    "sriChaitanya": "श्री चैतन्य",
+    "mathsPhysicsChemistry": "मैथ्स, फिजिक्स, केमिस्ट्री · 83% · 2020 – 2023",
+    "awsCert": "AWS Cloud Practitioner (CLF-C02)",
+    "bio": "मैं एक AI इंजीनियर हूं जो स्केलेबल सिस्टम और साफ यूजर अनुभव बनाने में रुचि रखता हूं। मैं AI/ML सॉल्यूशन, बैकएंड डेवलपमेंट और जटिल जरूरतों को सरल, रखरखाव योग्य समाधानों में बदलने पर ध्यान देता हूं।",
+    "experienceText": "डांगो, स्प्रिंग बूट, रिएक्ट और MERN स्टैक का उपयोग करके स्केलेबल फुल-स्टैक ऐप बनाना। AI-आधारित हॉस्पिटल मैनेजमेंट सिस्टम और स्टूडेंट मैनेजमेंट प्लेटफॉर्म जैसे प्रोजेक्ट बनाने का अनुभव। REST API, क्लीन आर्किटेक्चर, डेटाबेस डिज़ाइन, डॉकर, कुबेरनेट्स, एंसिबल और क्लाउड डिप्लॉयमेंट व डेवऑप्स ऑटोमेशन के लिए AWS में दक्ष।"
+  },
+  "contact": {
+    "getInTouch": "संपर्क करें",
+    "letsWorkTogether": "चलिए साथ काम करें",
+    "subtitle": "कोई प्रोजेक्ट है या बात करनी है? मैं आपसे सुनना पसंद करूंगा।",
+    "name": "नाम",
+    "email": "ईमेल",
+    "message": "संदेश",
+    "send": "भेजें",
+    "sending": "भेज रहा है...",
+    "thanksMessage": "धन्यवाद, जल्द ही संपर्क करूंगा।",
+    "placeholderName": "आपका नाम",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "आपका संदेश...",
+    "emailLabel": "ईमेल",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "formError": "कुछ गलत हुआ। कृपया दोबारा कोशिश करें।"
+  },
+  "footer": {
+    "home": "होम",
+    "copyright": "© {{year}} मोहंथ"
+  },
+  "cookie": {
+    "message": "यह साइट आपके अनुभव और एनालिटिक्स के लिए कुकीज़ का उपयोग कर सकती है। आप जरूरी कुकीज़ स्वीकार या अस्वीकार कर सकते हैं।",
+    "accept": "स्वीकार करें",
+    "reject": "अस्वीकार करें"
+  },
+  "notfound": {
+    "title": "पेज नहीं मिला",
+    "description": "जो पेज आप ढूंढ रहे हैं वह मौजूद नहीं है या हटा दिया गया है।",
+    "backToHome": "होम पर वापस जाएं"
+  },
+  "caseStudy": {
+    "backToWork": "काम पर वापस जाएं",
+    "viewAllProjects": "सभी प्रोजेक्ट देखें",
+    "viewProject": "प्रोजेक्ट देखें",
+    "projectNotFound": "प्रोजेक्ट नहीं मिला",
+    "overview": "अवलोकन",
+    "problem": "समस्या",
+    "process": "प्रक्रिया",
+    "solution": "समाधान",
+    "results": "परिणाम"
+  },
+  "projects": {
+    "healthcare-revenue-cycle-prediction": {
+      "title": "AI-आधारित हेल्थकेयर रेवेन्यू साइकिल प्रिडिक्शन सिस्टम",
+      "tagline": "क्लेम निराकरण, भुगतान विलंब और नो-शो के लिए ML सिस्टम",
+      "description": "रैंडम फॉरेस्ट मॉडल से बीमा क्लेम निराकरण, भुगतान विलंब और अपॉइंटमेंट नो-शो की भविष्यवाणी करने वाला मशीन लर्निंग सिस्टम।",
+      "overview": "A machine learning system designed to predict insurance claim denials, payment delays, and appointment no-shows in healthcare revenue cycle management.",
+      "problem": "Healthcare organizations spend 5–10 minutes manually validating each claim. Denied claims and no-shows create revenue leakage and operational inefficiency.",
+      "process": "Analyzed historical claim data to identify denial patterns. Built feature pipelines for claim metadata, patient history, and provider information.",
+      "solution": "Deployed a modular ML pipeline: Python-based training with Scikit-learn, REST APIs for real-time inference, React frontend for dashboards, MySQL for data persistence.",
+      "results": "Improved model accuracy for denial and no-show prediction, enabling proactive intervention and better financial forecasting."
+    },
+    "student-management-system": {
+      "title": "छात्र प्रबंधन प्रणाली",
+      "tagline": "फुल-स्टैक शैक्षणिक प्रशासन प्लेटफॉर्म",
+      "description": "छात्र रिकॉर्ड, कोर्स, उपस्थिति और ग्रेड प्रबंधित करने के लिए व्यापक प्रणाली। डांगो और MySQL से बनाया गया।",
+      "overview": "The Student Management System is a full-stack web application designed to streamline academic administration.",
+      "problem": "Educational institutions often rely on scattered spreadsheets and legacy systems, leading to data inconsistency and limited reporting.",
+      "process": "We followed an iterative design and development process: gathered requirements, designed the database schema and API, built the Django backend with REST endpoints.",
+      "solution": "A Django-based platform with MySQL for reliable data storage, role-based authentication, RESTful APIs, and responsive UI.",
+      "results": "Reduced administrative overhead, centralized student data, automated report generation."
+    },
+    "video-streaming-platform": {
+      "title": "वीडियो स्ट्रीमिंग प्लेटफॉर्म",
+      "tagline": "नेटफ्लिक्स-स्टाइल स्ट्रीमिंग अनुभव",
+      "description": "यूजर ऑथेंटिकेशन, कंटेंट कैटलॉग और एडाप्टिव प्लेबैक वाला वीडियो स्ट्रीमिंग प्लेटफॉर्म।",
+      "overview": "A video streaming web application that mimics the experience of modern OTT platforms.",
+      "problem": "Small content creators need an affordable way to host and stream video content with proper cataloging and user management.",
+      "process": "We defined content and user models, implemented secure authentication, built a catalog UI with filters and search.",
+      "solution": "Full-stack streaming platform with user accounts, content categorization, responsive video player.",
+      "results": "Enabled organized video hosting, improved user engagement through better discoverability."
+    },
+    "farmer-friendly-web-app": {
+      "title": "किसान-अनुकूल वेब एप्लिकेशन",
+      "tagline": "किसानों को बाजार और संसाधनों से जोड़ना",
+      "description": "किसानों को बाजार भाव, मौसम जानकारी और कृषि संसाधन उपलब्ध कराने वाला वेब एप्लिकेशन।",
+      "overview": "The Farmer Friendly Web Application brings essential digital tools to farmers: real-time market prices, weather forecasts, crop advice.",
+      "problem": "Farmers in many regions lack easy access to market prices, weather data, and agricultural best practices.",
+      "process": "We conducted user research with local farmers, designed a simple navigation and language-friendly UI, integrated weather and price APIs.",
+      "solution": "A responsive web app with clear typography, minimal data usage, local language support, and integrations for weather and commodity prices.",
+      "results": "Better-informed farming decisions, improved access to market information."
+    }
+  }
+}

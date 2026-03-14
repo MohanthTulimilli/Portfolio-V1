@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "hello": "ನಮಸ್ಕಾರ",
+    "imMohanth": "ನಾನು ಮೋಹಂತ್",
+    "role": "AI-ML ಎಂಜಿನಿಯರ್",
+    "tagline": "ನಾನು ಸ್ಕೇಲಬಲ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳು, AI-ಪವರ್ಡ್ ಸಿಸ್ಟಮ್‌ಗಳು ಮತ್ತು ಕ್ಲೌಡ್ ಸೊಲ್ಯೂಶನ್‌ಗಳನ್ನು ಕ್ಲೀನ್ ಆರ್ಕಿಟೆಕ್ಚರ್ ಮತ್ತು ಯೂಸರ್ ಅನುಭವದ ಮೇಲೆ ಫೋಕಸ್ ಹಾಕಿ ನಿರ್ಮಿಸುತ್ತೇನೆ.",
+    "viewWork": "ವರ್ಕ್ ನೋಡಿ",
+    "downloadResume": "ರೆಸ್ಯೂಮ್ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ",
+    "contact": "ಸಂಪರ್ಕಿಸಿ",
+    "scrollDown": "ಕೆಳಗೆ ಸ್ಕ್ರಾಲ್ ಮಾಡಿ"
+  },
+  "nav": {
+    "work": "ವರ್ಕ್",
+    "about": "ನನ್ನ ಬಗ್ಗೆ",
+    "projects": "ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು",
+    "contact": "ಸಂಪರ್ಕ"
+  },
+  "work": {
+    "selectedWork": "ಆಯ್ದ ವರ್ಕ್",
+    "projects": "ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು"
+  },
+  "about": {
+    "about": "ನನ್ನ ಬಗ್ಗೆ",
+    "openTo": "ತೆರೆದಿದೆ",
+    "openToText": "ನಾನು <1>ಇಂಟರ್ನ್‌ಶಿಪ್‌ಗಳು</1>, <3>ಕಾಂಟ್ರಾಕ್ಟ್</3> ಮತ್ತು <5>ಪೂರ್ಣ-ಸಮಯ</5> ಅವಕಾಶಗಳನ್ನು ಹುಡುಕುತ್ತಿದ್ದೇನೆ. AI/ML, ಫುಲ್-ಸ್ಟ್ಯಾಕ್ ಅಥವಾ ಕ್ಲೌಡ್‌ನಲ್ಲಿ ಏನನ್ನಾದರೂ ನಿರ್ಮಿಸುತ್ತಿದ್ದರೆ—ಮಾತನಾಡಿ.",
+    "skills": "ಸ್ಕಿಲ್‌ಗಳು",
+    "experience": "ಅನುಭವ",
+    "education": "ಶಿಕ್ಷಣ",
+    "certifications": "ಪ್ರಮಾಣಪತ್ರಗಳು",
+    "verifyCredential": "ಕ್ರೆಡೆನ್ಷಿಯಲ್ ಪರಿಶೀಲಿಸಿ",
+    "btech": "B.Tech in Computer Science",
+    "klu": "ಕೋನೇರು ಲಕ್ಷ್ಮಯ್ಯ ವಿಶ್ವವಿದ್ಯಾಲಯ",
+    "cgpa": "CGPA: 8.96 · 2023 – 2027",
+    "intermediate": "ಇಂಟರ್ಮೀಡಿಯೆಟ್ (10+2)",
+    "sriChaitanya": "ಶ್ರೀ ಚೈತನ್ಯ",
+    "mathsPhysicsChemistry": "ಗಣಿತ, ಭೌತಶಾಸ್ತ್ರ, ರಸಾಯನಶಾಸ್ತ್ರ · 83% · 2020 – 2023",
+    "awsCert": "AWS Cloud Practitioner (CLF-C02)",
+    "bio": "ಸ್ಕೇಲಬಲ್ ಸಿಸ್ಟಮ್‌ಗಳು ಮತ್ತು ಕ್ಲೀನ್ ಯೂಸರ್ ಅನುಭವಗಳನ್ನು ನಿರ್ಮಿಸುವಲ್ಲಿ ಆಸಕ್ತಿಯಿರುವ AI ಎಂಜಿನಿಯರ್. AI/ML ಪರಿಹಾರಗಳು, ಬ್ಯಾಕೆಂಡ್ ಅಭಿವೃದ್ಧಿ ಮತ್ತು ಸಂಕೀರ್ಣ ಅವಶ್ಯಕತೆಗಳನ್ನು ಸರಳ, ನಿರ್ವಹಣೀಯ ಪರಿಹಾರಗಳಾಗಿ ಮಾರ್ಪಡಿಸುವುದರ ಮೇಲೆ ಗಮನ ಹಾಕುತ್ತೇನೆ.",
+    "experienceText": "ಡjango, ಸ್ಪ್ರಿಂಗ್ ಬೂಟ್, ರಿಯಾಕ್ಟ್ ಮತ್ತು MERN ಸ್ಟ್ಯಾಕ್ ಬಳಸಿ ಸ್ಕೇಲಬಲ್ ಫುಲ್-ಸ್ಟ್ಯಾಕ್ ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ನಿರ್ಮಿಸುವುದು. AI-ಆಧಾರಿತ ಆಸ್ಪತ್ರೆ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿ ನಿರ್ವಹಣಾ ವೇದಿಕೆಗಳಂತಹ ಯೋಜನೆಗಳನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಿದ ಅನುಭವ. REST APIಗಳು, ಕ್ಲೀನ್ ಆರ್ಕಿಟೆಕ್ಚರ್, ಡೇಟಾಬೇಸ್ ಡಿಸೈನ್, ಡಾಕರ್, ಕುಬರ್ನೆಟ್ಸ್, ಆನ್ಸಿಬಲ್ ಮತ್ತು ಕ್ಲೌಡ್ ಡಿಪ್ಲಾಯ್ಮೆಂಟ್ ಮತ್ತು ಡೆವಒಪ್ಸ್ ಓಟೋಮೇಷನ್‌ಗಾಗಿ AWS ನಲ್ಲಿ ಕೌಶಲ್ಯ."
+  },
+  "contact": {
+    "getInTouch": "ಸಂಪರ್ಕಿಸಿ",
+    "letsWorkTogether": "ಒಟ್ಟಿಗೆ ಕೆಲಸ ಮಾಡೋಣ",
+    "subtitle": "ಯಾವುದೇ ಪ್ರಾಜೆಕ್ಟ್ ಇದೆಯೇ ಅಥವಾ ಚಾಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ? ನಿಮ್ಮಿಂದ ಕೇಳಲು ಇಷ್ಟಪಡುತ್ತೇನೆ.",
+    "name": "ಹೆಸರು",
+    "email": "ಇಮೇಲ್",
+    "message": "ಸಂದೇಶ",
+    "send": "ಕಳುಹಿಸಿ",
+    "sending": "ಕಳುಹಿಸುತ್ತಿದೆ...",
+    "thanksMessage": "ಧನ್ಯವಾದ, ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕಿಸುತ್ತೇನೆ.",
+    "placeholderName": "ನಿಮ್ಮ ಹೆಸರು",
+    "placeholderEmail": "your@email.com",
+    "placeholderMessage": "ನಿಮ್ಮ ಸಂದೇಶ...",
+    "emailLabel": "ಇಮೇಲ್",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "formError": "ಏನೋ ತಪ್ಪಾಗಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
+  },
+  "footer": {
+    "home": "ಹೋಮ್",
+    "copyright": "© {{year}} ಮೋಹಂತ್"
+  },
+  "cookie": {
+    "message": "ಈ ಸೈಟ್ ನಿಮ್ಮ ಅನುಭವ ಮತ್ತು ಅನಲಿಟಿಕ್ಸ್‌ಗಾಗಿ ಕುಕೀಗಳನ್ನು ಬಳಸಬಹುದು. ಅಗತ್ಯವಿಲ್ಲದ ಕುಕೀಗಳನ್ನು ಸ್ವೀಕರಿಸಬಹುದು ಅಥವಾ ನಿರಾಕರಿಸಬಹುದು.",
+    "accept": "ಸ್ವೀಕರಿಸಿ",
+    "reject": "ನಿರಾಕರಿಸಿ"
+  },
+  "notfound": {
+    "title": "ಪುಟ ಕಂಡುಬಂದಿಲ್ಲ",
+    "description": "ನೀವು ಹುಡುಕುತ್ತಿರುವ ಪುಟ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ ಅಥವಾ ಸ್ಥಳಾಂತರಿಸಲಾಗಿದೆ.",
+    "backToHome": "ಹೋಮ್‌ಗೆ ಹಿಂತಿರುಗಿ"
+  },
+  "caseStudy": {
+    "backToWork": "ವರ್ಕ್‌ಗೆ ಹಿಂತಿರುಗಿ",
+    "viewAllProjects": "ಎಲ್ಲಾ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳನ್ನು ನೋಡಿ",
+    "viewProject": "ಪ್ರಾಜೆಕ್ಟ್ ನೋಡಿ",
+    "projectNotFound": "ಪ್ರಾಜೆಕ್ಟ್ ಕಂಡುಬಂದಿಲ್ಲ",
+    "overview": "ಅವಲೋಕನ",
+    "problem": "ಸಮಸ್ಯೆ",
+    "process": "ಪ್ರಕ್ರಿಯೆ",
+    "solution": "ಪರಿಹಾರ",
+    "results": "ಫಲಿತಾಂಶಗಳು"
+  },
+  "projects": {
+    "healthcare-revenue-cycle-prediction": {
+      "title": "AI-ಆಧಾರಿತ ಹೆಲ್ತ್‌ಕೇರ್ ರೆವೆನ್ಯೂ ಸೈಕಲ್ ಪ್ರಿಡಿಕ್ಷನ್ ಸಿಸ್ಟಮ್",
+      "tagline": "ಕ್ಲೇಮ್ ನಿರಾಕರಣೆಗಳು, ಪಾವತಿ ವಿಳಂಬ ಮತ್ತು ನೋ-ಶೋಗಳಿಗಾಗಿ ML ಸಿಸ್ಟಮ್",
+      "description": "ರ್ಯಾಂಡಮ್ ಫಾರೆಸ್ಟ್ ಮಾಡೆಲ್‌ಗಳನ್ನು ಬಳಸಿ ವಿಮಾ ಕ್ಲೇಮ್ ನಿರಾಕರಣೆಗಳು, ಪಾವತಿ ವಿಳಂಬ ಮತ್ತು ಅಪಾಯಿಂಟ್‌ಮೆಂಟ್ ನೋ-ಶೋಗಳನ್ನು ಭವಿಷ್ಯ ನುಡಿಯುವ ಮೆಷಿನ್ ಲರ್ನಿಂಗ್ ಸಿಸ್ಟಮ್.",
+      "overview": "A machine learning system designed to predict insurance claim denials, payment delays, and appointment no-shows in healthcare revenue cycle management.",
+      "problem": "Healthcare organizations spend 5–10 minutes manually validating each claim. Denied claims and no-shows create revenue leakage and operational inefficiency.",
+      "process": "Analyzed historical claim data to identify denial patterns. Built feature pipelines for claim metadata, patient history, and provider information.",
+      "solution": "Deployed a modular ML pipeline: Python-based training with Scikit-learn, REST APIs for real-time inference, React frontend for dashboards, MySQL for data persistence.",
+      "results": "Improved model accuracy for denial and no-show prediction, enabling proactive intervention and better financial forecasting."
+    },
+    "student-management-system": {
+      "title": "ವಿದ್ಯಾರ್ಥಿ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ",
+      "tagline": "ಫುಲ್-ಸ್ಟ್ಯಾಕ್ ಶೈಕ್ಷಣಿಕ ನಿರ್ವಹಣಾ ವೇದಿಕೆ",
+      "description": "ವಿದ್ಯಾರ್ಥಿ ದಾಖಲೆಗಳು, ಕೋರ್ಸ್‌ಗಳು, ಹಾಜರಾತಿ ಮತ್ತು ಗ್ರೇಡ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಲು ಸಮಗ್ರ ವ್ಯವಸ್ಥೆ. ಡjango ಮತ್ತು MySQL ನೊಂದಿಗೆ ನಿರ್ಮಿಸಲಾಗಿದೆ.",
+      "overview": "The Student Management System is a full-stack web application designed to streamline academic administration.",
+      "problem": "Educational institutions often rely on scattered spreadsheets and legacy systems, leading to data inconsistency and limited reporting.",
+      "process": "We followed an iterative design and development process: gathered requirements, designed the database schema and API, built the Django backend with REST endpoints.",
+      "solution": "A Django-based platform with MySQL for reliable data storage, role-based authentication, RESTful APIs, and responsive UI.",
+      "results": "Reduced administrative overhead, centralized student data, automated report generation."
+    },
+    "video-streaming-platform": {
+      "title": "ವೀಡಿಯೋ ಸ್ಟ್ರೀಮಿಂಗ್ ವೇದಿಕೆ",
+      "tagline": "ನೆಟ್‌ಫ್ಲಿಕ್ಸ್-ಶೈಲಿ ಸ್ಟ್ರೀಮಿಂಗ್ ಅನುಭವ",
+      "description": "ಬಳಕೆದಾರ ದೃಢೀಕರಣ, ವಿಷಯ ಕ್ಯಾಟಲಾಗ್ ಮತ್ತು ಅಡಾಪ್ಟಿವ್ ಪ್ಲೇಬ್ಯಾಕ್ ಹೊಂದಿರುವ ವೀಡಿಯೋ ಸ್ಟ್ರೀಮಿಂಗ್ ವೇದಿಕೆ.",
+      "overview": "A video streaming web application that mimics the experience of modern OTT platforms.",
+      "problem": "Small content creators need an affordable way to host and stream video content with proper cataloging and user management.",
+      "process": "We defined content and user models, implemented secure authentication, built a catalog UI with filters and search.",
+      "solution": "Full-stack streaming platform with user accounts, content categorization, responsive video player.",
+      "results": "Enabled organized video hosting, improved user engagement through better discoverability."
+    },
+    "farmer-friendly-web-app": {
+      "title": "ರೈತ-ಸ್ನೇಹಿ ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್",
+      "tagline": "ರೈತರನ್ನು ಮಾರುಕಟ್ಟೆಗಳು ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳಿಗೆ ಸಂಪರ್ಕಿಸುವುದು",
+      "description": "ರೈತರಿಗೆ ಮಾರುಕಟ್ಟೆ ಬೆಲೆಗಳು, ಹವಾಮಾನ ಮಾಹಿತಿ ಮತ್ತು ಕೃಷಿ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಸಹಾಯ ಮಾಡುವ ವೆಬ್ ಅಪ್ಲಿಕೇಶನ್.",
+      "overview": "The Farmer Friendly Web Application brings essential digital tools to farmers: real-time market prices, weather forecasts, crop advice.",
+      "problem": "Farmers in many regions lack easy access to market prices, weather data, and agricultural best practices.",
+      "process": "We conducted user research with local farmers, designed a simple navigation and language-friendly UI, integrated weather and price APIs.",
+      "solution": "A responsive web app with clear typography, minimal data usage, local language support, and integrations for weather and commodity prices.",
+      "results": "Better-informed farming decisions, improved access to market information."
+    }
+  }
+}

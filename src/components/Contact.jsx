@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 const IconGitHub = () => (
@@ -13,16 +14,17 @@ const IconLinkedIn = () => (
   </svg>
 );
 
-const links = [
-  { label: 'Email', href: 'mailto:mohanthtulimilli.11t@gmail.com', value: 'mohanthtulimilli.11t@gmail.com', icon: null },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/mohanth', value: 'LinkedIn', icon: IconLinkedIn },
-  { label: 'GitHub', href: 'https://github.com/MohanthTulimilli', value: 'GitHub', icon: IconGitHub },
+const linkConfig = [
+  { labelKey: 'contact.emailLabel', href: 'mailto:mohanthtulimilli.11t@gmail.com', value: 'mohanthtulimilli.11t@gmail.com', icon: null },
+  { labelKey: 'contact.linkedin', href: 'https://linkedin.com/in/mohanth', value: 'LinkedIn', icon: IconLinkedIn },
+  { labelKey: 'contact.github', href: 'https://github.com/MohanthTulimilli', value: 'GitHub', icon: IconGitHub },
 ];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mreyqzpy';
 const THANK_YOU_API = '/api/send-thank-you';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -59,7 +61,7 @@ export default function Contact() {
       setMessage('');
     } catch (err) {
       setStatus('error');
-      setErrorMessage(err.message || 'Something went wrong. Please try again.');
+      setErrorMessage(err.message || t('contact.formError'));
     }
   }
 
@@ -78,19 +80,19 @@ export default function Contact() {
         className="max-w-2xl mx-auto"
       >
         <div className="text-center mb-10 sm:mb-16">
-          <p className="text-text-muted text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">Get in touch</p>
+          <p className="text-text-muted text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">{t('contact.getInTouch')}</p>
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-text-primary mb-4 sm:mb-6">
-            Let's work together
+            {t('contact.letsWorkTogether')}
           </h2>
           <p className="text-text-secondary text-base sm:text-lg">
-            Have a project in mind or want to chat? I'd love to hear from you.
+            {t('contact.subtitle')}
           </p>
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 flex-wrap text-center mb-10 sm:mb-14">
-          {links.map(({ label, href, value, icon: Icon }) => (
+          {linkConfig.map(({ labelKey, href, value, icon: Icon }) => (
             <a
-              key={label}
+              key={labelKey}
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
@@ -98,7 +100,7 @@ export default function Contact() {
             >
               {Icon && <Icon />}
               <span>
-                <span className="text-text-muted text-sm block sm:inline sm:mr-1">{label}</span>
+                <span className="text-text-muted text-sm block sm:inline sm:mr-1">{t(labelKey)}</span>
                 <span className="font-medium">{value}</span>
               </span>
             </a>
@@ -116,39 +118,39 @@ export default function Contact() {
           <div className="space-y-6">
             <div>
               <label htmlFor="contact-name" className="block text-sm font-medium text-text-secondary mb-2">
-                Name
+                {t('contact.name')}
               </label>
               <input
                 id="contact-name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
+                placeholder={t('contact.placeholderName')}
                 className="w-full px-4 py-3 rounded-lg bg-background border border-[rgba(255,255,255,0.08)] text-text-primary placeholder:text-text-muted focus:outline-none focus:border-white/30 transition-colors"
               />
             </div>
             <div>
               <label htmlFor="contact-email" className="block text-sm font-medium text-text-secondary mb-2">
-                Email
+                {t('contact.email')}
               </label>
               <input
                 id="contact-email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
+                placeholder={t('contact.placeholderEmail')}
                 className="w-full px-4 py-3 rounded-lg bg-background border border-[rgba(255,255,255,0.08)] text-text-primary placeholder:text-text-muted focus:outline-none focus:border-white/30 transition-colors"
               />
             </div>
             <div>
               <label htmlFor="contact-message" className="block text-sm font-medium text-text-secondary mb-2">
-                Message
+                {t('contact.message')}
               </label>
               <textarea
                 id="contact-message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Your message..."
+                placeholder={t('contact.placeholderMessage')}
                 rows={5}
                 className="w-full px-4 py-3 rounded-lg bg-background border border-[rgba(255,255,255,0.08)] text-text-primary placeholder:text-text-muted focus:outline-none focus:border-white/30 transition-colors resize-y min-h-[120px]"
               />
@@ -168,7 +170,7 @@ export default function Contact() {
             whileHover={status === 'loading' || status === 'success' ? undefined : { scale: 1.02 }}
             whileTap={status === 'loading' || status === 'success' ? undefined : { scale: 0.98 }}
           >
-            {status === 'loading' && 'Sending...'}
+            {status === 'loading' && t('contact.sending')}
             {status === 'success' && (
               <motion.span
                 initial={{ scale: 0, opacity: 0 }}
@@ -187,7 +189,7 @@ export default function Contact() {
                 </svg>
               </motion.span>
             )}
-            {status === 'idle' && 'Send'}
+            {status === 'idle' && t('contact.send')}
           </motion.button>
           {status === 'success' && (
             <motion.p
@@ -196,7 +198,7 @@ export default function Contact() {
               transition={{ delay: 0.5 }}
               className="mt-4 text-sm text-text-secondary"
             >
-              Thanks, I'll get back to you soon.
+              {t('contact.thanksMessage')}
             </motion.p>
           )}
         </motion.form>

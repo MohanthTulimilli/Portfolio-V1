@@ -1,10 +1,11 @@
+import './i18n';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 
-// Prevent browser from restoring scroll on reload (so we can land at top when URL has hash)
+// Control scroll ourselves when navigating to /work, /about, etc.
 if (typeof history !== 'undefined' && 'scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
