@@ -58,10 +58,10 @@ export default function Hero() {
         />
       )}
 
-      {/* Layer 2: Overlay for text readability */}
+      {/* Layer 2: Overlay – dark theme for readability; light theme slight brightness reduction only */}
       <div
         className="absolute inset-0 z-[1]"
-        style={{ backgroundColor: isLight ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.55)' }}
+        style={{ backgroundColor: isLight ? 'rgba(0,0,0,0.18)' : 'rgba(0,0,0,0.55)' }}
         aria-hidden
       />
 
