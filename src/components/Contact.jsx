@@ -20,6 +20,7 @@ const links = [
 ];
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mreyqzpy';
+const THANK_YOU_API = '/api/send-thank-you';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -44,6 +45,13 @@ export default function Contact() {
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || `Submission failed (${res.status})`);
       }
+
+      // Send thank-you email to the submitter (non-blocking)
+      fetch(THANK_YOU_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name.trim(), email: email.trim() }),
+      }).catch(() => {});
 
       setStatus('success');
       setName('');
