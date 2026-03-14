@@ -19,8 +19,8 @@ export default function ProjectCard({ project, index }) {
     >
       <Link to={`/project/${id}`} className="block">
         <div className="bg-background-secondary border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden transition-all duration-300 hover:border-[rgba(255,255,255,0.15)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
-          <div className={`aspect-video bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-            <span className="text-text-muted text-2xl sm:text-3xl md:text-4xl font-light tracking-tight opacity-60">
+          <div className={`project-photo aspect-video bg-gradient-to-br ${gradient} flex items-center justify-center`}>
+            <span className="project-photo-label text-text-muted text-2xl sm:text-3xl md:text-4xl font-light tracking-tight opacity-60">
               {tTitle.split(' ')[0]}
             </span>
           </div>

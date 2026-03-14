@@ -64,8 +64,8 @@ export default function CaseStudy() {
           <p className="text-text-secondary text-base sm:text-lg leading-relaxed">{t(`projects.${id}.description`, { defaultValue: project.description })}</p>
         </motion.div>
 
-        <div className={`aspect-video rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.gradient} mb-16 sm:mb-24 flex items-center justify-center`}>
-          <span className="text-text-muted text-3xl sm:text-4xl md:text-5xl font-light tracking-tight opacity-60">
+        <div className={`project-photo aspect-video rounded-xl sm:rounded-2xl bg-gradient-to-br ${project.gradient} mb-16 sm:mb-24 flex items-center justify-center`}>
+          <span className="project-photo-label text-text-muted text-3xl sm:text-4xl md:text-5xl font-light tracking-tight opacity-60">
             {t(`projects.${id}.title`, { defaultValue: project.title }).split(' ')[0]}
           </span>
         </div>

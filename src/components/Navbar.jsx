@@ -113,7 +113,7 @@ export default function Navbar() {
                 );
               })}
               <li className="pt-3 mt-2 border-t border-[rgba(255,255,255,0.08)]">
-                <LanguageSwitcher inline />
+                <LanguageSwitcher inline onAfterSelect={() => setMobileOpen(false)} />
               </li>
             </ul>
           </motion.div>

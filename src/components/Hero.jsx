@@ -2,10 +2,14 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { useTheme } from '../context/ThemeContext';
+
+const HERO_VIDEO_DARK = '/Updated-4.mp4';
+const HERO_VIDEO_LIGHT = '/light-theme.mp4';
+const HERO_VIDEO_POSTER_DARK = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>');
+const HERO_VIDEO_POSTER_LIGHT = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23fff" width="1" height="1"/></svg>');
 
 // Tiny dark poster (1x1) so the video area isn’t empty while loading
-const HERO_VIDEO_POSTER = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>');
-
 function scrollOneStep() {
   const start = window.scrollY;
   const end = start + window.innerHeight;
@@ -24,20 +28,26 @@ function scrollOneStep() {
 
 export default function Hero() {
   const { t } = useTranslation();
+  const { theme } = useTheme();
   const [videoSrc, setVideoSrc] = useState('');
 
+  const isLight = theme === 'light';
+  const videoUrl = isLight ? HERO_VIDEO_LIGHT : HERO_VIDEO_DARK;
+  const posterUrl = isLight ? HERO_VIDEO_POSTER_LIGHT : HERO_VIDEO_POSTER_DARK;
+
   useEffect(() => {
-    setVideoSrc('/Updated-4.mp4');
-  }, []);
+    setVideoSrc(videoUrl);
+  }, [videoUrl]);
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
-      {/* Layer 1: Full-screen background video – loads after mount, metadata-only preload */}
+      {/* Layer 1: Full-screen background video – dark or light theme */}
       {videoSrc && (
         <video
-          className="absolute inset-0 w-full h-full object-cover z-0 brightness-125 contrast-110"
+          key={videoSrc}
+          className="absolute inset-0 w-full h-full object-cover z-0"
           src={videoSrc}
-          poster={HERO_VIDEO_POSTER}
+          poster={posterUrl}
           autoPlay
           muted
           loop
@@ -48,10 +58,10 @@ export default function Hero() {
         />
       )}
 
-      {/* Layer 2: Dark overlay for text readability */}
+      {/* Layer 2: Overlay for text readability */}
       <div
         className="absolute inset-0 z-[1]"
-        style={{ backgroundColor: 'rgba(0,0,0,0.55)' }}
+        style={{ backgroundColor: isLight ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.55)' }}
         aria-hidden
       />
 

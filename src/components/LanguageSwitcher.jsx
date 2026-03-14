@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { languages } from '../i18n';
 
-export default function LanguageSwitcher({ inline = false }) {
+export default function LanguageSwitcher({ inline = false, onAfterSelect } = {}) {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -25,6 +25,7 @@ export default function LanguageSwitcher({ inline = false }) {
   function handleSelectLang(code) {
     i18n.changeLanguage(code);
     setOpen(false);
+    if (typeof onAfterSelect === 'function') onAfterSelect();
   }
 
   if (inline) {

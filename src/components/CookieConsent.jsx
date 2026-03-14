@@ -41,7 +41,7 @@ export default function CookieConsent() {
         aria-live="polite"
         aria-label="Cookie consent"
       >
-        <div className="w-full border-t border-[rgba(255,255,255,0.12)] bg-black px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
+        <div className="cookie-consent-bar w-full border-t border-[rgba(255,255,255,0.12)] bg-black px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
           <p className="text-text-secondary text-sm sm:text-base leading-relaxed max-w-3xl">
             {t('cookie.message')}
           </p>
