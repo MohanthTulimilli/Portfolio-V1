@@ -2,7 +2,7 @@
   "hero": {
     "hello": "Hello",
     "imMohanth": "I'm Mohanth",
-    "role": "Product Designer",
+    "role": "DevOps Engineer",
     "tagline": "I build scalable applications, AI-powered systems, and cloud solutions with a focus on clean architecture and user experience.",
     "viewWork": "View Work",
     "downloadResume": "Download Resume",
@@ -35,7 +35,7 @@
     "sriChaitanya": "Sri Chaitanya",
     "mathsPhysicsChemistry": "Maths, Physics, Chemistry · 83% · 2020 – 2023",
     "awsCert": "AWS Cloud Practitioner (CLF-C02)",
-    "bio": "I'm a Product Designer with a passion for building scalable systems and clean user experiences. I focus on AI/ML solutions, backend development, and turning complex requirements into simple, maintainable solutions.",
+    "bio": "I'm a DevOps Engineer with a passion for building scalable systems and clean user experiences. I focus on AI/ML solutions, backend development, and turning complex requirements into simple, maintainable solutions.",
     "experienceText": "Building scalable full-stack applications using Django, Spring Boot, React, and the MERN stack, with experience developing projects like an AI-based hospital management system and student management platforms, and skilled in REST APIs, clean architecture, database design, Docker, Kubernetes, Ansible, and AWS for cloud deployment and DevOps automation."
   },
   "contact": {

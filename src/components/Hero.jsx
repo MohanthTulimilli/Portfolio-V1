@@ -45,7 +45,7 @@ export default function Hero() {
       {videoSrc && (
         <video
           key={videoSrc}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
           src={videoSrc}
           poster={posterUrl}
           autoPlay
@@ -65,8 +65,8 @@ export default function Hero() {
         aria-hidden
       />
 
-      {/* Layer 3: Hero text content and buttons – lifted slightly in both themes */}
-      <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 text-center -translate-y-6">
+      {/* Layer 3: Hero text content and buttons – lifted slightly in both themes; z-20 so taps reach links on mobile (dark + light) */}
+      <div className="relative z-20 flex flex-col justify-center items-center min-h-screen px-4 sm:px-6 pt-20 sm:pt-24 pb-24 sm:pb-32 text-center -translate-y-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ export default function Hero() {
         >
           <Link
             to="/work"
-            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-white text-background font-medium rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-background transition-all duration-300 text-sm sm:text-base touch-manipulation relative z-10"
+            className="hero-view-work inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-white text-background font-medium rounded-full hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-background transition-all duration-300 text-sm sm:text-base touch-manipulation relative z-[1] cursor-pointer"
           >
             {t('hero.viewWork')}
           </Link>
@@ -134,7 +134,7 @@ export default function Hero() {
           scrollOneStep();
           e.currentTarget.blur();
         }}
-        className="hero-btn-arrow absolute bottom-20 sm:bottom-12 left-0 right-0 mx-auto z-10 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
+        className="hero-btn-arrow absolute bottom-20 sm:bottom-12 left-0 right-0 mx-auto z-20 w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border border-white/30 text-white/90 transition-all duration-300 focus:outline-none focus:bg-transparent focus:text-white focus:border-white/30 hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white"
         aria-label={t('hero.scrollDown')}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
