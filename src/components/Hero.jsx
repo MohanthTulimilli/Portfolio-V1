@@ -9,6 +9,15 @@ const HERO_VIDEO_LIGHT = '/light-theme.mp4';
 const HERO_VIDEO_POSTER_DARK = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>');
 const HERO_VIDEO_POSTER_LIGHT = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23fff" width="1" height="1"/></svg>');
 
+function getInitialVideoUrl() {
+  if (typeof window === 'undefined') return HERO_VIDEO_DARK;
+  try {
+    return localStorage.getItem('portfolio-theme') === 'light' ? HERO_VIDEO_LIGHT : HERO_VIDEO_DARK;
+  } catch {
+    return HERO_VIDEO_DARK;
+  }
+}
+
 // Tiny dark poster (1x1) so the video area isn’t empty while loading
 function scrollOneStep() {
   const start = window.scrollY;
@@ -29,7 +38,7 @@ function scrollOneStep() {
 export default function Hero() {
   const { t } = useTranslation();
   const { theme } = useTheme();
-  const [videoSrc, setVideoSrc] = useState('');
+  const [videoSrc, setVideoSrc] = useState(getInitialVideoUrl);
 
   const isLight = theme === 'light';
   const videoUrl = isLight ? HERO_VIDEO_LIGHT : HERO_VIDEO_DARK;
@@ -52,8 +61,8 @@ export default function Hero() {
           muted
           loop
           playsInline
-          preload="metadata"
-          fetchPriority="low"
+          preload="auto"
+          fetchPriority="high"
           aria-hidden
         />
       )}

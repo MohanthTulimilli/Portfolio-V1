@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
@@ -67,17 +66,6 @@ export default function Footer() {
             </svg>
             {t('contact.linkedin')}
           </a>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors text-sm"
-            aria-label="Home"
-          >
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            {t('footer.home')}
-          </Link>
         </div>
       </div>
     </motion.footer>

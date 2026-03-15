@@ -18,6 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      (function() {
+        var theme = 'dark';
+        try { if (localStorage.getItem('portfolio-theme') === 'light') theme = 'light'; } catch (e) {}
+        var video = theme === 'light' ? '/light-theme.mp4' : '/Updated-4.mp4';
+        document.write('<link rel="preload" as="video" href="' + video + '">');
+      })();
+    </script>
   </head>
   <body>
     <script>
