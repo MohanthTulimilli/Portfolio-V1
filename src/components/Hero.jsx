@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -38,6 +38,7 @@ function scrollOneStep() {
 export default function Hero() {
   const { t } = useTranslation();
   const { theme } = useTheme();
+  const videoRef = useRef(null);
   const [videoSrc, setVideoSrc] = useState(getInitialVideoUrl);
 
   const isLight = theme === 'light';
@@ -48,24 +49,45 @@ export default function Hero() {
     setVideoSrc(videoUrl);
   }, [videoUrl]);
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const play = () => {
+      video.play().catch(() => {});
+    };
+    if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) play();
+    else video.addEventListener('canplay', play, { once: true });
+    return () => video.removeEventListener('canplay', play);
+  }, [videoSrc]);
+
+  useEffect(() => {
+    const other = isLight ? HERO_VIDEO_DARK : HERO_VIDEO_LIGHT;
+    const link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.as = 'video';
+    link.href = other;
+    document.head.appendChild(link);
+    return () => link.remove();
+  }, [isLight]);
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
       {/* Layer 1: Full-screen background video – dark or light theme */}
-      {videoSrc && (
-        <video
-          key={videoSrc}
-          className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
-          src={videoSrc}
-          poster={posterUrl}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          fetchPriority="high"
-          aria-hidden
-        />
-      )}
+      <video
+        ref={videoRef}
+        key={videoSrc}
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        src={videoSrc}
+        poster={posterUrl}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        fetchPriority="high"
+        disablePictureInPicture
+        aria-hidden
+      />
 
       {/* Layer 2: Overlay – dark theme for readability; light theme slight brightness reduction only (pointer-events: none so buttons/links work on mobile) */}
       <div

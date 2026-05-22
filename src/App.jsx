@@ -5,11 +5,9 @@ import BackToTop from './components/BackToTop';
 import CookieConsent from './components/CookieConsent';
 import LoadingSpinner from './components/LoadingSpinner';
 import NotFound from './pages/NotFound';
+import Home from './pages/Home';
 
-// Optional: add delay to see loading spinner when testing (remove in production)
-const delay = (ms) => (m) => new Promise((r) => setTimeout(() => r(m), ms));
-const Home = lazy(() => import('./pages/Home').then(delay(800)));
-const CaseStudy = lazy(() => import('./pages/CaseStudy').then(delay(800)));
+const CaseStudy = lazy(() => import('./pages/CaseStudy'));
 
 function App() {
   return (

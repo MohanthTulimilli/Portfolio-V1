@@ -4,13 +4,19 @@ const THEME_KEY = 'portfolio-theme';
 
 const ThemeContext = createContext({ theme: 'dark', setTheme: () => {} });
 
-export function ThemeProvider({ children }) {
-  const [theme, setThemeState] = useState('dark');
-
-  useEffect(() => {
+function getStoredTheme() {
+  if (typeof window === 'undefined') return 'dark';
+  try {
     const stored = localStorage.getItem(THEME_KEY);
-    if (stored === 'light' || stored === 'dark') setThemeState(stored);
-  }, []);
+    if (stored === 'light' || stored === 'dark') return stored;
+  } catch {
+    /* ignore */
+  }
+  return 'dark';
+}
+
+export function ThemeProvider({ children }) {
+  const [theme, setThemeState] = useState(getStoredTheme);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

@@ -2,8 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/Logo-new.jpg" sizes="32x32" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var theme = 'dark';
+        try {
+          if (localStorage.getItem('portfolio-theme') === 'light') theme = 'light';
+        } catch (e) {}
+        var video = theme === 'light' ? '/light-theme.mp4' : '/Updated-4.mp4';
+        document.write('<link rel="preload" as="video" href="' + video + '" fetchpriority="high">');
+        if (typeof fetch === 'function') {
+          fetch(video, { priority: 'high' }).catch(function () {});
+        }
+      })();
+    </script>
+    <link rel="icon" type="image/jpeg" href="/Logo-new.jpg" sizes="32x32" />
     <title>Mohanth | AI Agents Developer</title>
     <meta name="description" content="Mohanth Tulimilli | AI Agents Developer. Portfolio showcasing projects in machine learning, full-stack development, and cloud solutions. Healthcare ML, Django, React, Spring Boot, AWS." />
     <meta name="keywords" content="Mohanth, Mohanth Tulimilli, AI Agents Developer, portfolio, machine learning, full-stack developer, Python, React, Django, Spring Boot, AWS, healthcare ML" />
@@ -17,15 +30,15 @@
     <meta name="twitter:description" content="AI Agents Developer. Portfolio — ML systems, full-stack development, cloud solutions." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <script>
-      (function() {
-        var theme = 'dark';
-        try { if (localStorage.getItem('portfolio-theme') === 'light') theme = 'light'; } catch (e) {}
-        var video = theme === 'light' ? '/light-theme.mp4' : '/Updated-4.mp4';
-        document.write('<link rel="preload" as="video" href="' + video + '">');
-      })();
-    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </noscript>
   </head>
   <body>
     <script>
