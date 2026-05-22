@@ -9,21 +9,22 @@
         try {
           if (localStorage.getItem('portfolio-theme') === 'light') theme = 'light';
         } catch (e) {}
-        var base = '/Portfolio-V1/';
+        var base = '/';
         var video = theme === 'light' ? base + 'light-theme.mp4' : base + 'Updated-4.mp4';
         var poster = theme === 'light' ? base + 'hero-poster-light.jpg' : base + 'hero-poster-dark.jpg';
         document.write('<link rel="preload" as="image" href="' + poster + '" fetchpriority="high">');
         document.write('<link rel="preload" as="video" href="' + video + '" fetchpriority="high">');
       })();
     </script>
-    <link rel="icon" type="image/jpeg" href="/Portfolio-V1/Logo-new.jpg" sizes="32x32" />
+    <link rel="icon" type="image/jpeg" href="/Logo-new.jpg" sizes="32x32" />
     <title>Mohanth | AI Agents Developer</title>
     <meta name="description" content="Mohanth Tulimilli | AI Agents Developer. Portfolio showcasing projects in machine learning, full-stack development, and cloud solutions. Healthcare ML, Django, React, Spring Boot, AWS." />
     <meta name="keywords" content="Mohanth, Mohanth Tulimilli, AI Agents Developer, portfolio, machine learning, full-stack developer, Python, React, Django, Spring Boot, AWS, healthcare ML" />
     <!-- Update og:image content with your live site URL + /Logo-new.jpg when deployed -->
     <meta property="og:title" content="Mohanth | AI Agents Developer" />
     <meta property="og:description" content="AI Agents Developer. Portfolio — ML systems, full-stack apps, cloud solutions. Projects: Healthcare Revenue Cycle Prediction, Student Management, Video Streaming, Farmer App." />
-    <meta property="og:image" content="https://mohanthtulimilli.github.io/Portfolio-V1/Logo-new.jpg" />
+    <meta property="og:url" content="https://www.mohanth.dev/" />
+    <meta property="og:image" content="https://www.mohanth.dev/Logo-new.jpg" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mohanth | AI Agents Developer" />
