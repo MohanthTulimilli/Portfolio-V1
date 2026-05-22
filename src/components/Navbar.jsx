@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import LanguageSwitcher from './LanguageSwitcher';
+import { assetUrl } from '../utils/assets';
 
 const navLinks = [
   { path: '/work', labelKey: 'nav.work' },
@@ -42,7 +43,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-text-primary font-medium text-base sm:text-lg tracking-tight hover:opacity-80 transition-opacity"
         >
           <img
-            src="/Logo-new.jpg"
+            src={assetUrl('Logo-new.jpg')}
             alt="Mohanth"
             className="w-7 h-7 sm:w-8 sm:h-8 rounded-none object-contain flex-shrink-0"
           />

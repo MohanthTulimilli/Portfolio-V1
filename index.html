@@ -9,14 +9,14 @@
         try {
           if (localStorage.getItem('portfolio-theme') === 'light') theme = 'light';
         } catch (e) {}
-        var video = theme === 'light' ? '/light-theme.mp4' : '/Updated-4.mp4';
+        var base = '/Portfolio-V1/';
+        var video = theme === 'light' ? base + 'light-theme.mp4' : base + 'Updated-4.mp4';
+        var poster = theme === 'light' ? base + 'hero-poster-light.jpg' : base + 'hero-poster-dark.jpg';
+        document.write('<link rel="preload" as="image" href="' + poster + '" fetchpriority="high">');
         document.write('<link rel="preload" as="video" href="' + video + '" fetchpriority="high">');
-        if (typeof fetch === 'function') {
-          fetch(video, { priority: 'high' }).catch(function () {});
-        }
       })();
     </script>
-    <link rel="icon" type="image/jpeg" href="/Logo-new.jpg" sizes="32x32" />
+    <link rel="icon" type="image/jpeg" href="/Portfolio-V1/Logo-new.jpg" sizes="32x32" />
     <title>Mohanth | AI Agents Developer</title>
     <meta name="description" content="Mohanth Tulimilli | AI Agents Developer. Portfolio showcasing projects in machine learning, full-stack development, and cloud solutions. Healthcare ML, Django, React, Spring Boot, AWS." />
     <meta name="keywords" content="Mohanth, Mohanth Tulimilli, AI Agents Developer, portfolio, machine learning, full-stack developer, Python, React, Django, Spring Boot, AWS, healthcare ML" />

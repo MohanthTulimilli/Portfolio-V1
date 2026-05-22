@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
+import { assetUrl } from '../utils/assets';
 
-const HERO_VIDEO_DARK = '/Updated-4.mp4';
-const HERO_VIDEO_LIGHT = '/light-theme.mp4';
-const HERO_VIDEO_POSTER_DARK = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23000" width="1" height="1"/></svg>');
-const HERO_VIDEO_POSTER_LIGHT = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><rect fill="%23fff" width="1" height="1"/></svg>');
+const HERO_VIDEO_DARK = assetUrl('Updated-4.mp4');
+const HERO_VIDEO_LIGHT = assetUrl('light-theme.mp4');
+const HERO_POSTER_DARK = assetUrl('hero-poster-dark.jpg');
+const HERO_POSTER_LIGHT = assetUrl('hero-poster-light.jpg');
 
 function getInitialVideoUrl() {
   if (typeof window === 'undefined') return HERO_VIDEO_DARK;
@@ -18,7 +19,6 @@ function getInitialVideoUrl() {
   }
 }
 
-// Tiny dark poster (1x1) so the video area isn’t empty while loading
 function scrollOneStep() {
   const start = window.scrollY;
   const end = start + window.innerHeight;
@@ -40,43 +40,61 @@ export default function Hero() {
   const { theme } = useTheme();
   const videoRef = useRef(null);
   const [videoSrc, setVideoSrc] = useState(getInitialVideoUrl);
+  const [videoReady, setVideoReady] = useState(false);
 
   const isLight = theme === 'light';
   const videoUrl = isLight ? HERO_VIDEO_LIGHT : HERO_VIDEO_DARK;
-  const posterUrl = isLight ? HERO_VIDEO_POSTER_LIGHT : HERO_VIDEO_POSTER_DARK;
+  const posterUrl = isLight ? HERO_POSTER_LIGHT : HERO_POSTER_DARK;
 
   useEffect(() => {
+    setVideoReady(false);
     setVideoSrc(videoUrl);
   }, [videoUrl]);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const play = () => {
+    const onReady = () => {
+      setVideoReady(true);
       video.play().catch(() => {});
     };
-    if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) play();
-    else video.addEventListener('canplay', play, { once: true });
-    return () => video.removeEventListener('canplay', play);
+    if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) onReady();
+    else video.addEventListener('canplay', onReady, { once: true });
+    return () => video.removeEventListener('canplay', onReady);
   }, [videoSrc]);
 
   useEffect(() => {
     const other = isLight ? HERO_VIDEO_DARK : HERO_VIDEO_LIGHT;
-    const link = document.createElement('link');
-    link.rel = 'prefetch';
-    link.as = 'video';
-    link.href = other;
-    document.head.appendChild(link);
-    return () => link.remove();
+    const prefetchLater = () => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.as = 'video';
+      link.href = other;
+      document.head.appendChild(link);
+    };
+    const delayMs = 4000;
+    const id = window.setTimeout(prefetchLater, delayMs);
+    return () => window.clearTimeout(id);
   }, [isLight]);
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
+      {/* Poster shows instantly while the MP4 buffers (video opacity stays 0 until canplay) */}
+      <img
+        src={posterUrl}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        fetchPriority="high"
+        decoding="async"
+      />
       {/* Layer 1: Full-screen background video – dark or light theme */}
       <video
         ref={videoRef}
         key={videoSrc}
-        className="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none"
+        className={`absolute inset-0 w-full h-full object-cover z-0 pointer-events-none transition-opacity duration-500 ${
+          videoReady ? 'opacity-100' : 'opacity-0'
+        }`}
         src={videoSrc}
         poster={posterUrl}
         autoPlay
@@ -143,7 +161,7 @@ export default function Hero() {
             {t('hero.viewWork')}
           </Link>
           <a
-            href="/resume.pdf"
+            href={assetUrl('resume.pdf')}
             download="Mohanth_Resume.pdf"
             className="hero-btn-outline inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-[rgba(255,255,255,0.3)] text-white font-medium rounded-full transition-all duration-300 text-sm sm:text-base hover:bg-white hover:text-black hover:border-white hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] active:bg-white active:text-black active:border-white focus:outline-none focus:bg-transparent focus:text-white focus:border-[rgba(255,255,255,0.3)]"
           >
